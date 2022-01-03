@@ -4,7 +4,7 @@
             <span>{{item.title}}</span>
         </a>
         
-        <div v-if="itemIndex === 0" :class="['expand-container', {'is-active' : dropdownActive}]">
+        <div v-if="itemIndex === 0 && item != 0" :class="['expand-container', {'is-active' : dropdownActive}]">
             <div class="expand grid-row">
                 <div class="sub-nav sub-nav--expandable ">
                     <ul>
@@ -18,7 +18,7 @@
             </div>
         </div>
                                         
-        <div v-if="itemIndex !== 0 && !item.url" :class="['expand-container', {'is-active' : dropdownActive}]">
+        <div v-if="itemIndex !== 0 && !item.url && item != 0" :class="['expand-container', {'is-active' : dropdownActive}]">
             <div class="expand grid-row">
                 <div class="sub-nav  ">
                     <ul>

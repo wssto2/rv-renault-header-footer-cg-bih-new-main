@@ -89,15 +89,14 @@
 
                         <nav :class="['menu-popup', { 'is-active' : (Number.isInteger(activeCarCategory)) }]" style="min-height: 938px;">
                             <div class="menu-popup_close">Zatvori</div>
-                            <div class="menu-popup_inner">
+                            <div class="menu-popup_inner" v-if="mainNavFirst != 0">
 
-                                <div v-show="activeCarCategory === carPickerIndex" v-for="(carPicker, carPickerIndex) in mainNavigation[0].children" :key="carPickerIndex" class="menu-popup_vehicles-container  is-active" data-popup="595468798" style="left: 327px;">
+                                <div v-show="activeCarCategory === carPickerIndex" v-for="(carPicker, carPickerIndex) in mainNavFirst" :key="carPickerIndex" class="menu-popup_vehicles-container  is-active" data-popup="595468798" style="left: 327px;">
                                     
                                     <a :href="carPicker.url" class="menu-popup_vehicle-block menu-popup_range">
                                         <span class="menu-popup_icon" :data-phf-ico-after="carPicker.icon"></span>
                                         <span class="menu-popup_vehicle-name">{{carPicker.title}}</span>
                                     </a>
-                                    
                                     <a  v-for="(carElement, carElementIndex) in carPicker.children" :key="carElementIndex" :href="carElement.url" target="_self" class="menu-popup_vehicle-block">
                                         <span class="menu-popup_img">
                                             <img :src="carElement.icon">
@@ -154,6 +153,10 @@
         computed: {
             topNavIndexClass(){
                 return true
+            },
+            
+            mainNavFirst() {
+                return  this.mainNavigation && this.mainNavigation[0] && this.mainNavigation[0].children;
             }
         },
         methods: {
