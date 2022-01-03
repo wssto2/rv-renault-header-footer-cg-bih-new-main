@@ -30,7 +30,7 @@
                             </ul>
                         </div>
                     </div>
-                    <div class="black-separator visible-md visible-lg">
+                    <div class="black-separator visible-md visible-lg" v-if="passion != 0">
                         <p>{{passion}}</p>
                     </div>
                     <div class="bottom-menu">
