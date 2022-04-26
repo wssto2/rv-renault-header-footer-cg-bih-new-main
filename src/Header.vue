@@ -21,13 +21,13 @@
                         <header class="module-container">
                             <div class="header-part brand-logo">
                                 <a href="index.html" title="Renault BiH">
-                                    <img src="@/assets/images/renault-logo.svg" alt="Renault Logo">
+                                    <img src="./assets/images/renault-logo.svg" alt="Renault Logo">
                                     
                                 </a>
                             </div>
 
                             <div class="header-part menu-trigger ico-before-menu" @click="toggleMobileDropdown">
-                                <img src="@/assets/images/burger-menu.svg" alt="Menu trigger">
+                                <img src="./assets/images/burger-menu.svg" alt="Menu trigger">
                             </div>
                             
 
