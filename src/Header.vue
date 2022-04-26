@@ -21,13 +21,12 @@
                         <header class="module-container">
                             <div class="header-part brand-logo">
                                 <a href="index.html" title="Renault BiH">
-                                    <img src="./assets/images/renault-logo.svg" alt="Renault Logo">
-                                    
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="60" height="79"><path d="M48.006 39.5L26.994 79h-5.997L0 39.5 20.997 0h5.997L6.011 39.5l17.992 33.857L41.994 39.5 31.496 19.757l3.005-5.643L48.006 39.5zM39.003 0h-5.997L12.008 39.5l13.504 25.386 3.006-5.643-10.499-19.757L36.011 5.63l17.992 33.857L33.006 79h5.997L60 39.5 39.003 0z" fill="#FFF"/></svg>
                                 </a>
                             </div>
 
                             <div class="header-part menu-trigger ico-before-menu" @click="toggleMobileDropdown">
-                                <img src="./assets/images/burger-menu.svg" alt="Menu trigger">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="20"><defs><filter id="a"><feColorMatrix in="SourceGraphic" values="0 0 0 0 1.000000 0 0 0 0 1.000000 0 0 0 0 1.000000 0 0 0 1.000000 0"/></filter></defs><g filter="url(#a)" transform="translate(-280 -20)"><g transform="translate(280 20)"><rect width="24" height="2" rx="1"/><rect width="16" height="2" y="9" rx="1"/><rect width="20" height="2" y="18" rx="1"/></g></g></svg>
                             </div>
                             
 
