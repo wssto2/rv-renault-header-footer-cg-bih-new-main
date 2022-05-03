@@ -5,7 +5,7 @@
                 <footer>
                     <div class="module-container">
                         <div class="container-fluid">
-                            <ul v-if="mainFooter != 0" class="row footer-menu" data-fplugin="expand-content" data-fres="[&quot;xs&quot;]" data-fopts="{&quot;expandTriggerClass&quot;: &quot;open&quot;, &quot;collapsedDisplay&quot; : &quot;&quot;, &quot;grouped&quot; : &quot;true&quot;, &quot;collapsedDisplay&quot; : &quot;&quot;}">
+                            <ul v-if="mainFooter != 0 || socialNavigation != 0" class="row footer-menu" data-fplugin="expand-content" data-fres="[&quot;xs&quot;]" data-fopts="{&quot;expandTriggerClass&quot;: &quot;open&quot;, &quot;collapsedDisplay&quot; : &quot;&quot;, &quot;grouped&quot; : &quot;true&quot;, &quot;collapsedDisplay&quot; : &quot;&quot;}">
                                 <li v-for="(item, itemIndex) in mainFooter" :key="itemIndex" class="col-xs-12 col-sm-4 col-md-3 expand-box" @click.prevent="toggle(itemIndex)">
                                     <div :class="['menu-group-name','trigger', {'open': isVisible(itemIndex)}]">{{ item.title }}</div>
                                     
@@ -186,5 +186,8 @@
     }
     .displayBlock {
         display: block !important;
+    }
+    .plugin-helios-header-footer .helios-special-elements#helios-footer .page-footer footer .footer-menu li.social-menu {
+        float: right;
     }
 </style>
