@@ -21,7 +21,7 @@
                         <header class="module-container">
                             <div class="header-part brand-logo">
                                 <a href="index.html" title="Renault BiH">
-                                    <img :src="logo" alt="Renault Logo">
+                                    <img src="https://unpkg.com/@wssto2/rv-renault-header-footer-cg-bih-new-main/dist/img/renault-logo.svg" alt="Renault Logo">
                                 </a>
                             </div>
 
