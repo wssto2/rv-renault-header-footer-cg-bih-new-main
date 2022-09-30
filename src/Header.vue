@@ -20,8 +20,8 @@
                     <div class="page-header--helios" data-fplugin="menu">
                         <header class="module-container">
                             <div class="header-part brand-logo">
-                                <a href="index.html" title="Renault BiH">
-                                    <img :src="logo" alt="Renault Logo">
+                                <a :href="basicInformation.site_url" :title="basicInformation.site_title">
+                                    <img src="https://unpkg.com/@wssto2/rv-renault-header-footer-cg-bih-new-main/dist/img/renault-logo.svg" alt="Renault Logo">
                                 </a>
                             </div>
 
@@ -35,7 +35,7 @@
                     
                                 <ul class="main-navigation">
                                     <li class="visible-xs visible-sm">
-                                        <a class="header-icon header-icon-home" href="index.html"><span>Renault</span></a>
+                                        <a class="header-icon header-icon-home" :href="basicInformation.site_url"><span>Renault</span></a>
                                     </li>
                                     <Dropdown 
                                         v-for="(navigationItem, itemIndex) in mainNavigation" 
@@ -56,7 +56,7 @@
                 
                                 <ul class="main-navigation">
                                     <li class="visible-xs visible-sm">
-                                        <a class="header-icon header-icon-home" href="index.html"><span>Renault</span></a>
+                                        <a class="header-icon header-icon-home" :href="basicInformation.site_url"><span>Renault</span></a>
                                     </li>
                                     
                                     <Dropdown 
@@ -142,6 +142,7 @@
                 expanded: false,
                 mobileDropdown: false,
                 activeCarCategory: null,
+                basicInformation: [],
                 topNavigation: [],                 
                 mainNavigation: []
             }
@@ -163,6 +164,7 @@
             fetchNavigation(apiUri) {
                 axios.get(apiUri)
                     .then((response) => {
+                        this.basicInformation = response.data;
                         this.topNavigation = response.data.top_navigation.schema;
                         this.mainNavigation = response.data.main_navigation.schema;
                     })
@@ -240,6 +242,6 @@
         font-family:Pictos;
         font-style: normal;
         font-weight: 400;
-        src:url(./assets/fonts/PictosComplete-Regular.woff) format("woff")
+        src:url(./assets/fonts/PictosCompleteXXI-Regular.woff) format("woff")
     }
 </style>
